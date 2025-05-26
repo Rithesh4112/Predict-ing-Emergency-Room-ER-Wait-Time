@@ -10,10 +10,10 @@ Training a Linear Regression model
 Evaluating the model’s predictive performance
 Analyzing limitations and proposing future improvements
 
-###Dataset Overview
+### Dataset Overview
 The dataset contains 5,000 records, each representing a hospital visit with 19 associated features. These include time-based, patient-specific, and hospital-specific variables.
 
-###Selected Features:
+### Selected Features:
 For simplicity and interpretability, only three features were selected:
 
 Time of Day: When the patient arrived (e.g., morning, afternoon, night)
@@ -26,7 +26,7 @@ The target variable is:
 
 Total Wait Time: The duration (in minutes) a patient waited before being attended to
 
-###Methodology
+### Methodology
 1. Data Preprocessing
 The dataset was loaded and examined for missing values.
 
@@ -44,7 +44,7 @@ The model was trained on the selected features using scikit-learn.
 
 The learned coefficients represent the weights of each feature in predicting wait time.
 
-###Evaluation and Results
+### Evaluation and Results
 The model's performance was assessed using the following metrics:
 
 Metric	Description	Value
@@ -53,12 +53,12 @@ MSE	Mean Squared Error – penalizes large errors	4652.10
 RMSE	Root Mean Squared Error – interpretable in minutes	68.20
 R² Score	Coefficient of Determination – model fit	~0.00
 
-###Interpretation:
+### Interpretation:
 The low R² score suggests the model explains almost none of the variability in wait times.
 
 This is expected given the limited feature set and the inherent complexity of ER operations, which are influenced by many unpredictable and non-linear factors.
 
-###Analysis
+### Analysis
 Why Did the Model Perform Poorly?
 Feature Limitation: Only 3 out of 19 features were used.
 
@@ -68,7 +68,7 @@ Model Choice: Linear regression assumes linearity, which likely doesn't hold in 
 
 Missing Contextual Variables: Factors such as patient condition, staff workload, hospital crowding, and emergency severity were not included.
 
-###Future Work
+### Future Work
 To improve performance and applicability, the following steps are recommended:
 
 Feature Expansion:
@@ -90,7 +90,7 @@ Time-Series Approach:
 
 If data is timestamped, implement a time-series model to capture temporal trends.
 
-###Conclusion
+### Conclusion
 This project served as a foundational exploration into ER wait time prediction using a basic machine learning approach. Although the results were not accurate enough for practical deployment, the process illuminated key challenges in healthcare data modeling and pointed toward more advanced solutions.
 
 By integrating richer features and more sophisticated algorithms, predictive models could eventually support hospital staff in decision-making, resource allocation, and improving patient outcomes.
